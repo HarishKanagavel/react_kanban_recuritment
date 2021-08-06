@@ -1,9 +1,9 @@
 const reorder = (list, startIndex, endIndex) => {
-  const result = Array.from(list);
-  const [removed] = result.splice(startIndex, 1);
-  result.splice(endIndex, 0, removed);
+  const result1 = Array.from(list);
+  const [removed] = result1.splice(startIndex, 1);
+  result1.splice(endIndex, 0, removed);
 
-  return result;
+  return result1;
 };
 
 export default reorder;
@@ -28,13 +28,13 @@ export const reorderQuoteMap = ({ quoteMap, source, destination }) => {
   current.splice(source.index, 1);
   next.splice(destination.index, 0, target);
 
-  const result = {
+  const result2 = {
     ...quoteMap,
     [source.droppableId]: current,
     [destination.droppableId]: next
   };
 
   return {
-    quoteMap: result
+    quoteMap: result2
   };
 };
